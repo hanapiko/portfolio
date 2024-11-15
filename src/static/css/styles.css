@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    /* background: linear-gradient(to right, #6a11cb, #2575fc); */
+    background: whitesmoke;
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar h1 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    background-image: url('/static/images/logo.png');
+    background-size: cover;  /* Ensures the image scales to fit the container */
+    background-repeat: no-repeat;
+    background-position:center;  /* Position the image to the left of the text */
+    padding-left: 60px;  /* Add space between the image and the text */
+    line-height: 50px; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid; /* Adds a border around the image (change color as needed) */
+    margin-right: 10px;
+}
+
+.navbar nav a {
+    /* color: white; */
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+    text-decoration: none;
+}
+#about{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+#about h2{
+    font-size: 3rem;  /* Adjust to your desired size */
+    text-align: center;  /* Center the heading */
+    margin-bottom: 20px;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(to bottom right, #2c3e50, #3498db);  */
+    color: white;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, grey, purple, brown, green); */
+    /* background-size: 400% 400%; */
+    animation: gradient 70s ease infinite;
+    /* animation: subtleGradientMove 45s ease-in-out infinite; */
+    text-align: center;
+    /* background-blend-mode: overlay; */
+    position: relative;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/bg.jpg'), linear-gradient(to bottom, rgba(235, 113, 0, 0.8), rgba(23, 170, 23, 0.7));
+}
+#hero h1{
+    font-size: 3rem;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.socialcontainer {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;  /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    /* position: absolute; */
+    /* top: 50px;           
+    left: 20px;           */
+    display: flex;
+    /* transform: translateY(-50%); */
+    flex-direction: column;
+    gap: 10px;           /* Space between each social icon */
+    /* padding-left: 20px; */
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #333;         /* Set your desired color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #0077b5;      /* Example: LinkedIn blue; you can set different hover colors for each icon */
+}
+/* #hero p {
+    font-family: 'Courier New', Courier, monospace; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    max-width: 100;
+    border-right: 2px solid black; 
+    animation: typing 10s steps(233) 1s forwards, blink 0.75s step-end infinite;
+} */
+/* @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 233ch;
+    }
+} */
+
+/* Keyframe for the blinking cursor */
+/* @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+} */
+.part1{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    align-items: center;
+    width: 100%;
+    /* padding: 20px; */
+    max-width: 1200px;
+    gap: 30px;
+}
+
+/* Optional styling to visually separate the divs */
+.img{
+    flex: 1;
+    /* display: flex;
+    justify-content: center; */
+    max-width: 40%;
+}
+.img img {
+    width: 100%;
+    /* max-width: 300%;  */
+    height: auto;
+    border-radius: 8px; 
+    /* max-width: 200px;  */
+}
+.left {
+    background-color: lightblue;
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 60%;
+}
+
+.right {
+    flex: 1;
+    background-color: lightcoral;
+    padding: 20px;                  
+    border-radius: 8px;              
+    color: white;                 
+    max-width: 30%;               
+    text-align: center; 
+}
+.right h1 {
+    font-size: 24px;                 /* Increase font size */
+    margin-bottom: 10px;             /* Space between heading and skills list */
+    text-transform: uppercase;       /* Uppercase the heading */
+}
+
+/* Style each skill */
+.right p {
+    font-size: 16px;                 /* Font size for skills */
+    margin: 5px 0;                   /* Space between each skill */
+}
+
+/* Optional: Hover effect for skills */
+.right p:hover {
+    color: lightyellow;         
+    font-weight: bold;              
+    cursor: pointer;                
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    background: #f4f4f4;
+}
+
+/* .project {
+    margin: 20px 0;
+    text-align: center;
+} */
+#projects {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+#projects h2 {
+    font-size: 3rem; /* Large font for the section heading */
+    margin-bottom: 20px;
+}
+
+#projects p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555; /* Slightly darker text color */
+}
+.project1, .project2, .project3 {
+    display: flex;
+    margin: 20px auto;
+    text-align: center;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.project-image {
+     /* width: 30vw; */
+    height: 400px; 
+    width: 400px;
+    border-radius: 10px;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+    background-position: center;
+    margin-right: 30px;
+}
+.project-info{
+     /* width: 45vw; */
+    padding: 20px;
+     /* flex-grow: 1; */
+    max-width: 600px;
+    text-align: left;
+}
+.project-info h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #666;
+}
+.project1:hover, .project2:hover, .project3:hover {
+    transform: scale(1.05); /* Slight zoom effect when hovered */
+}
+#project1 {
+    background-image: url('/static/images/pic1.png'); /* Replace with actual path */
+}
+
+#project2 {
+    background-image: url('/static/images/pic3.png'); /* Replace with actual path */
+}
+
+#project3 {
+    background-image: url('/static/images/pic2.png'); /* Replace with actual path */
+}
+/* .gradient {
+    background: linear-gradient(to right, #f7f8f8, #e8e9e9);
+} */
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8a5fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-link i {
+    margin-right: 8px; /* Spacing between icon and text */
+    font-size: 1.1em;
+}
+
+.project-link:hover {
+    background-color: #ff758c;
+    transform: translateY(-2px); /* Lifts the button slightly */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-link:active {
+    transform: translateY(0); /* Button returns to normal when clicked */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+#contact {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Add some space around */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Limit the width */
+    margin: 0 auto; /* Center the section */
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    color: #333;
+    text-align: center; /* Center the heading */
+    margin-bottom: 30px; /* Space below heading */
+}
+#contact form {
+    background-color: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners for the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the form */
+    max-width: 600px; /* Max width for the form */
+    margin: 0 auto; /* Centering the form horizontally */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold; /* Bold labels */
+    display: block; /* Stack labels above input/textarea */
+    margin-bottom: 5px; /* Space below label */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Space inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    font-size: 1rem;
+    border-radius: 4px; /* Slightly rounded corners */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6f61; /* Highlight border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+textarea {
+    resize: vertical; /* Allow vertical resizing for the textarea */
+}
+button[type="submit"] {
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2009a5; /* Darker color on hover */
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* button {
+    background-color: #007BFF; 
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+button:hover {
+    background-color: #0056b3;
+} */
+@media (max-width: 768px) {
+    .project1, .project2, .project3 {
+        flex-direction: column; /* Stack the image and info on smaller screens */
+        align-items: center; /* Center the items */
+        margin-bottom: 30px;
+    }
+
+    .project-image {
+        width: 150px; /* Smaller image size on mobile */
+        height: 150px;
+        margin-bottom: 15px; /* Space between image and text */
+    }
+
+    .project-info {
+        text-align: center;
+    }
+
+    .project-link {
+        font-size: 1rem; /* Adjust font size for links on smaller screens */
+    }
+}
