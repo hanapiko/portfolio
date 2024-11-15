@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>HANNAH JUMA</h1>
+            <nav>
+                <a href="#hero">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1><b>HEY I'M HANNAH JUMA</b></h1><br>
+        <p>"I'm an Apprentice Software Developer at Zone01 Kisumu. I’m passionate about using technology to solve problems <br>and am thrilled to be starting my career in software development. I’m currently building my skills in Golang, Javascrip and Rust."</p>
+        <a href="#projects" class="btn">Projects</a>
+        <div class="socialcontainer">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hannah-juma-831195300/" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/hanapiko" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/hannahjuma" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+       
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+        <div class="part1">
+            <div class="img">
+                <img src="/static/images/abt.JPG" alt="My picture">
+            </div>
+            <div class="left">
+                <h1>Get to Know me !</h1>
+                <p>I'm a Software Developer building still building my skills in different languages.Check out some of my work in the Projects section.<br>I also like sharing content related to the stuff that I have learned and participated since i joined Zone01 Development so it can help other people of the Dev Community.<br> Feel free to Connect or Follow me on my Linkedin where I post useful content related to what i do.I'm open to Job opportunities where I can contribute, learn and grow. <br>If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p><br>
+                <a href="#contact" class="btn">Contacts</a>
+            </div>
+            <div class="right">
+                <h1>Skills</h1>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>GOLANG</p>
+                <p>JAVASCRIPT</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Here you will find some of the personal projects that I created with each project containing some information </p>
+        <div class="project1">
+            <div class="project-image" id="project1"></div>
+            <div class="project-info">
+                <h3>GROUPIE-TRACKER</h3>
+                <p>Groupie Trackers consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.</p>
+                <a href="https://groupie-tracker-production-82ab.up.railway.app" class="project-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                </a>
+            </div>
+        </div>
+        <div class="project2">
+            <div class="project-image" id="project2"></div>
+            <div class="project-info">
+                <h3>CLONER-NEWS</h3>
+                <p>This project is a user interface (UI) for the HackerNews API, designed to keep users informed about the latest tech news, jobs, and polls in an appealing and user-friendly manner. The UI dynamically handles and presents various types of posts, comments, and live data updates, ensuring users stay up to date with the most recent content in real-time.</p>
+                <a href="https://ascii-art-web-export-file-production.up.railway.app/" class="project-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                </a>
+            </div>
+        </div>
+        <div class="project3">
+            <div class="project-image gradient" id="project3"></div>
+            <div class="project-info">
+                <h3>ASCII-ART WEB EXPORT FILE</h3>
+                <p>Ascii-art-web-export consists on making sure that it is possible to export/download the output of the web application(ascii-art-web).</p>
+                <a href="https://ascii-art-web-export-file-production.up.railway.app/" class="project-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible </p>
+        <form id="contact-form" action="/send" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="message-response"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
