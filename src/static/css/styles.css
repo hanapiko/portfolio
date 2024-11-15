@@ -89,12 +89,13 @@ header {
 }
 
 #hero {
-    padding-top: 80px;
+    padding-top: 100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-size: cover; */
     /* background: linear-gradient(to bottom right, #2c3e50, #3498db);  */
     color: white;
     /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, grey, purple, brown, green); */
@@ -110,6 +111,9 @@ header {
 }
 #hero h1{
     font-size: 3rem;
+}
+#hero p{
+    font-size: 25px;
 }
 @keyframes gradient {
     0% { background-position: 0% 50%; }
