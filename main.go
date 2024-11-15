@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"log"
 	"net/http"
 	"net/smtp"
-	"os"
-	"html/template"
 )
 
 // func serveStaticFiles() {
@@ -20,8 +19,10 @@ func sendEmail(to string, subject string, body string) error {
 	// SMTP server setup (replace with your own credentials)
 	smtpHost := "smtp.gmail.com" // Gmail SMTP server
 	smtpPort := "587"            // TLS port
-	smtpUser := os.Getenv("SMTP_USER")   // Get email from environment variable
-	smtpPassword := os.Getenv("SMTP_PASSWORD") // Get app password from environment variable
+	// smtpUser := os.Getenv("SMTP_USER")   // Get email from environment variable
+	// smtpPassword := os.Getenv("SMTP_PASSWORD") // Get app password from environment variable
+	smtpUser := "apikojuma94@gmail.com"
+	smtpPassword := "pglx bdza asbo mjio"
 
 	// Set up the authentication information
 	auth := smtp.PlainAuth("", smtpUser, smtpPassword, smtpHost)
