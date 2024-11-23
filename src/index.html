@@ -15,12 +15,13 @@
                 <img src="/static/images/logo.png" alt="Logo">
                 HANNAH JUMA
             </h1>
-            <nav>
+            <nav id="nav_menu">
                 <a href="#hero">HOME</a>
                 <a href="#about">ABOUT</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#contact">CONTACT</a>
             </nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
         </div>
     </header>
 
@@ -45,28 +46,31 @@
     </section>
 
     <section id="about">
-        <h2 class="about-heading">About Me</h2>
-        <p class="about-intro">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
-        <div class="part1">
-            <div class="img">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="about-heading">About Me</h2>
+                <p class="about-intro">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+                <div class="about-description">
+                    <h1>Get to Know me !</h1>
+                    <p>I'm a Software Developer building my skills in different languages. Check out some of my work in the Projects section. I also like sharing content related to the stuff that I have learned and participated in since I joined Zone01 Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my LinkedIn where I post useful content related to what I do. I'm open to Job opportunities where I can contribute, learn, and grow. If you have a good opportunity that matches my skills and experience, don't hesitate to contact me.</p>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+                <div class="about-skills">
+                    <h1>Skills</h1>
+                    <ul>
+                        <li><span class="skill-icon">🌐</span> HTML</li>
+                        <li><span class="skill-icon">🎨</span> CSS</li>
+                        <li><span class="skill-icon">⚙️</span> Go</li>
+                        <li><span class="skill-icon">💻</span> JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-image">
                 <img src="/static/images/abt.JPG" alt="My picture">
-            </div>
-            <div class="left">
-                <h1>Get to Know me !</h1>
-                <p>I'm a Software Developer building still building my skills in different languages.Check out some of my work in the Projects section.<br>I also like sharing content related to the stuff that I have learned and participated since i joined Zone01 Development so it can help other people of the Dev Community.<br> Feel free to Connect or Follow me on my Linkedin where I post useful content related to what i do.I'm open to Job opportunities where I can contribute, learn and grow. <br>If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p><br>
-                <a href="#contact" class="btn">Contacts</a>
-            </div>
-            <div class="right">
-                <h1>Skills</h1>
-                <ul>
-                    <li><span class="skill-icon">🌐</span> HTML</li>
-                    <li><span class="skill-icon">🎨</span> CSS</li>
-                    <li><span class="skill-icon">⚙️</span> GOLANG</li>
-                    <li><span class="skill-icon">💻</span> JAVASCRIPT</li>
-                </ul>
             </div>
         </div>
     </section>
+    
 
     <section id="projects">
         <h2>My Projects</h2>
@@ -139,6 +143,12 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');  // Toggle the 'active' class on the nav menu
+        }
+    </script>
 </body>
 </html>
