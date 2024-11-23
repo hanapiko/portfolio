@@ -27,69 +27,161 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .navbar h1 {
-    font-size: 1.5rem;
     display: flex;
     align-items: center;
+    font-size: 24px;
+    color: black;
+    margin: 0;
+  
 }
-
 .navbar h1 img {
-    width: 40px; /* Adjust logo size */
-    height: 40px;
-    margin-right: 10px;
-}
-
-.navbar nav {
-    display: flex;
-    gap: 15px;
+    width: 50px;   /* Logo width */
+    height: 50px;  /* Logo height */
+    border-radius: 50%;  /* Make the logo round */
+    margin-right: 15px;  /* Space between the logo and the text */
 }
 
 .navbar nav a {
-    color: white;
+    /* color: white; */
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 5px 10px;
 }
-
-.navbar nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
+.navbar nav {
+    display: flex;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-#about{
-    height: 100vh;
-    flex-direction: column;
+/* About Section Styling */
+#about {
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    padding: 40px 20px;
-    padding-top: 100px;
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
+    padding: 100px 20px;
+    background-image: url('/static/images/about-background.jpg'); /* Set your background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3); /* Optional: Adds subtle shadow for better readability */
 }
-#about h2{
-    font-size: 3rem;  /* Adjust to your desired size */
-    text-align: center;  /* Center the heading */
-    margin-bottom: 30px;
-    color: #333;
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 40px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    max-width: 600px;
+}
+
+.about-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+.about-intro {
+    font-size: 1.4rem;
+    color: rgb(116, 113, 113);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-description p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgb(116, 113, 113);
+}
+.about-description h1 {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color:black;
+}
+
+
+.about-skills h1 {
+    font-size: 2rem;
     font-weight: 600;
+    color:black;
+    margin-bottom: 20px;
+}
+
+.about-skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-skills li {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.about-image {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Shadow around the image */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding: 50px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 250px;
+        max-width: 250px;
+        margin-top: 30px;
+    }
+
+    .about-text {
+        padding: 0 10px;
+    }
 }
 
 #hero {
