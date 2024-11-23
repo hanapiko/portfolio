@@ -378,11 +378,48 @@ section {
 
 
 footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
     text-align: center;
     padding: 20px;
-    background: #333;
-    color: white;
+    margin-top: 20px;
 }
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sociallinks {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 15px; /* Add spacing between the icons */
+}
+
+.socialicon {
+    color: #fff; /* White color for the icons */
+    font-size: 24px; /* Increase icon size */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.socialicon:hover {
+    color: #00aced; /* Change color on hover (LinkedIn blue tone) */
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+@media (max-width: 600px) {
+    footer {
+        padding: 15px;
+    }
+
+    .socialicon {
+        font-size: 20px; /* Slightly smaller icons on small screens */
+    }
+}
+
 .socialicon {
     font-size: 24px;
     color: #fff;         
