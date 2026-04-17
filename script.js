@@ -141,23 +141,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Submission
-const form = document.querySelector('.contact-form');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    const subject = `Portfolio Contact from ${name}`;
-    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-
-    alert(`Thank you, ${name}! Opening your email client to send the message...`);
-    window.location.href = `mailto:apikojuma94@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-
-    form.reset();
-});
+// Form Submission - Formspree handles form submission
+// Form will submit directly to Formspree endpoint
 
 // Scroll Animation for Nav
 let lastScroll = 0;
